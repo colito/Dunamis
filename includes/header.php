@@ -80,5 +80,5 @@ if(!$page_name == 'Index Page')
 
 </div>
 
-<div class="container">
+<div class="container_12">
 
