@@ -164,6 +164,11 @@ dd  {
     padding: 2px;
 }
 
+#auth-form {
+    background-color: lightgrey;
+    padding-bottom: 5%;
+}
+
 .gradient-bg {
     /* fallback/image non-cover color */
     background-color: #1a82f7;
