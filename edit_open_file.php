@@ -15,7 +15,8 @@ if(is_readable($file_path))
 }
 else
 {
-    header('location : change_file_mode.php?file_path='.$file_path);
+    //header('location : change_file_mode.php?file_path='.$file_path);
+    header('Location: open_file.php?file_open=unreadable');
     echo 'File is unreadable. Check the file permissions.';
 }
 
