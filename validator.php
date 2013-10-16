@@ -80,7 +80,7 @@ ob_start();
                 else
                 {
                     //header('Location: '.$_SERVER['HTTP_REFERER']);
-                    echo 'No file extention';
+                    header('Location: open_file.php?file_create=false');
                 }
             }
         }
