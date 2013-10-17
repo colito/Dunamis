@@ -50,7 +50,7 @@ if(!$page_name == 'Index Page')
 <div id="topper">
 
     <div id="title">
-        <a href="#"><h2></h2></a>
+        <a href="#"><h2>Dunamis</h2></a>
     </div>
 
     <?php if($page_name != 'Index Page') {
