@@ -38,7 +38,7 @@
         <a href="file_explore.php"><h3>File Explorer</h3></a>
     </div>
 
-    <div class="grid_8">
+    <div id="file_explore" class="grid_8">
 
     <?php
         echo '<p class="upper">Current path:  <i class="lower">'.$current_path.'</i></p>';
