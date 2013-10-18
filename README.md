@@ -22,7 +22,14 @@ Issues that still need sorting out:
 * None noted as yet
 
 
-Objectives to be achieved:
+Objectives to be achieved in future:
 * Ability to change file permissions and/or change the apache user
 * Globalize links for easy file referencing from within the system
 * Add a footer that sticks to the bottom
+* Neatly organize project file system without at all hindering functionality
+* Establish functionality for creating directories and files anywhere within the file system being managed
+* Establish ability to view all possible information of the selected file
+* Make files on file explorer highlightable on hover over
+* Make tool fully responsive
+* Create files necessary for installation
+* Find a way to make the tool updatable
