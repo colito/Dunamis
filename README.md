@@ -1,7 +1,7 @@
 Dunamis - On Site Source Code Manager
 
 Purpose:
-Alllows user to make changes to their site's sources code regardless of what language the source is written in.
+Allows user to make changes to their site's sources code regardless of what language the source is written in.
 
 
 How to get started out:
