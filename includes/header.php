@@ -3,7 +3,7 @@
 require_once('config.php');
 $config = new Config();
 
-if(!$page_name == 'Index Page')
+if($page_name != 'Index Page')
 {
     session_start();
     if(empty($_SESSION['admin_active']))
@@ -50,7 +50,7 @@ if(!$page_name == 'Index Page')
 <div id="topper">
 
     <div id="title">
-        <a href="#"><h2>Dunamis</h2></a>
+        <a href="index.php"><h2>Dunamis</h2></a>
     </div>
 
     <?php if($page_name != 'Index Page') {
