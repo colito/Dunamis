@@ -25,6 +25,7 @@ Issues that still need sorting out:
 Objectives to be achieved in future:
 * Ability to change file permissions and/or change the apache user
 * Globalize links for easy file referencing from within the system
+* Prevent files with none editable code from being opened
 * Add a footer that sticks to the bottom
 * Neatly organize project file system without at all hindering functionality
 * Establish functionality for creating directories and files anywhere within the file system being managed
