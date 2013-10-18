@@ -1,5 +1,5 @@
 <?php
-    $page_name = 'File Explore';
+    $page_name = 'Page Name';
     require_once('includes/header.php');
 ?>
 
