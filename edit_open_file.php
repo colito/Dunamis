@@ -53,8 +53,9 @@ $file_extension = $file_info['extension'];
 
             <div id="edit_file" class="grid_12">
                 <form method="post" action="write_to_file.php">
+                    <p class="upper">Selected file: <i class="lower"><?php echo $actual_file; ?></i></p>
                     <p class="upper">
-                        Selected file: <i class="lower"><?php echo $actual_file; ?></i> &nbsp;&nbsp;&nbsp;&nbsp;
+
                         Writable: <?php echo $writable; ?> &nbsp;&nbsp;&nbsp;&nbsp;
                         File type: <i class="lower"><?php echo $file_extension; ?></i>
                         <input class="form-btn" type="submit" value="Save" <?php if(strpos($writable, 'false') == true) echo 'disabled'?>>
