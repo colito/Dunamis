@@ -16,7 +16,6 @@
                         $pword = $u_pword;
                         if($pword == $config->user_pword)
                         {
-                            session_start();
                             $_SESSION['admin_active'] = $u_name;
                             header('Location: open_file.php');
                             return;
@@ -46,6 +45,21 @@
             }
 
             header('Location: index.php?feedback='.$feedback);
+
+            echo $feedback;
+        }
+
+        public function logout()
+        {
+            # unset session variables
+            unset($_SESSION['admin_active']);
+            unset($_SESSION['start_time']);
+
+            #destroy session
+            session_destroy();
+
+            # redirect user back to index page
+            header('Location: index.php');
         }
     }
 

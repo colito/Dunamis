@@ -1,20 +1,32 @@
 <?php
-
-require_once('config.php');
-$config = new Config();
+ob_start();
+session_start();
 
 if($page_name != 'Index Page')
 {
-    session_start();
     if(empty($_SESSION['admin_active']))
     {
         header('Location: index.php');
     }
     else
     {
+        $_SESSION['start_time'] = time();
         $admin_session = $_SESSION['admin_active'];
     }
 }
+else
+{
+    if(!empty($_SESSION['admin_active']))
+    {
+        header('Location: open_file.php');
+    }
+}
+
+require_once('config.php');
+require_once('fns/user_handler.php');
+
+$user_handler = new UserHandler();
+$config = new Config();
 
 ?>
 

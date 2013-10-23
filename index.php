@@ -1,9 +1,9 @@
 <?php
+
     $page_name = 'Index Page';
     require_once('includes/header.php');
-    require_once('fns/user_handler.php');
 
-    $validator = new UserHandler();
+    $validator = $user_handler;
 
     if(isset($_GET['feedback']))
     {
