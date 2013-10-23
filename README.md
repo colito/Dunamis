@@ -23,6 +23,7 @@ Issues that still need sorting out:
 
 
 Objectives to be achieved in future:
+* Create session timeout
 * Ability to change file permissions and/or change the apache user
 * Globalize links for easy file referencing from within the system
 * Create a database login option on set up
