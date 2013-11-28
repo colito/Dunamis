@@ -7,7 +7,7 @@ class Config
 
     public function file_root()
     {
-        $root = $_SERVER['DOCUMENT_ROOT'].'/emp/';
+        $root = $_SERVER['DOCUMENT_ROOT'].'/emp/templata';
         return $root;
     }
 }
