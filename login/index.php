@@ -17,13 +17,7 @@ else
 
 if(($_SERVER['REQUEST_METHOD'] == 'POST'))
 {
-    var_dump('Posting back');
     $validator->validate_login($_POST['user_name'], $_POST['user_password']);
-}
-else
-{
-    var_dump(($_SERVER['REQUEST_METHOD']));
-    var_dump('Not pasting back');
 }
 
 ?>
