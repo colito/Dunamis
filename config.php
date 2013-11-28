@@ -7,7 +7,8 @@ class Config
 
     public function file_root()
     {
-        $root = $_SERVER['DOCUMENT_ROOT'].'/emp/templata';
+        # set this to the root folder relative to this projects containing folder
+        $root = $_SERVER['DOCUMENT_ROOT'].'/emp/';
         return $root;
     }
 }
