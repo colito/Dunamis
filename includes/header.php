@@ -2,6 +2,9 @@
 ob_start();
 session_start();
 
+require_once('../config.php');
+require_once('../fns/user_handler.php');
+
 if($page_name != 'Index Page')
 {
     if(empty($_SESSION['admin_active']))
@@ -21,9 +24,6 @@ else
         header('Location: '.navi_open_file);
     }
 }
-
-require_once('../config.php');
-require_once('../fns/user_handler.php');
 
 $user_handler = new UserHandler();
 $config = new Config();
