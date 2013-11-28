@@ -5,7 +5,7 @@
         public function validate_login($u_name, $u_pword)
         {
             $config = new Config();
-
+            var_dump('User Handler');
             if(!empty($u_name))
             {
                 $user_name = $u_name;
@@ -17,7 +17,7 @@
                         if($pword == $config->user_pword)
                         {
                             $_SESSION['admin_active'] = $u_name;
-                            header('Location: open_file.php');
+                            header('Location: '.navi_open_file);
                             return;
                         }
                         else
@@ -44,7 +44,7 @@
                 //echo 'Please enter your details';
             }
 
-            header('Location: index.php?feedback='.$feedback);
+            header('Location: ../login/?feedback='.$feedback);
 
             echo $feedback;
         }
@@ -59,7 +59,7 @@
             session_destroy();
 
             # redirect user back to index page
-            header('Location: index.php');
+            header('Location: ../login/');
         }
     }
 

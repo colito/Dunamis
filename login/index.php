@@ -1,47 +1,53 @@
 <?php
-    $page_name = 'Index Page';
-    require_once('../includes/header.php');
-    require_once('../fns/user_handler.php');
 
-    $validator = new UserHandler();
+$page_name = 'Index Page';
+require_once('../includes/header.php');
 
-    if(isset($_GET['feedback']))
-    {
-        $feedback = ($_GET['feedback']);
-        $feedback = '<i class="error">'.$feedback.'</i>';
-    }
-    else
-    {
-        $feedback = '<i class="success">Please enter your log in details</i>';
-    }
+$validator = $user_handler;
 
-    if(($_SERVER['REQUEST_METHOD'] == 'POST'))
-    {
-        $validator->validate_login($_POST['user_name'], $_POST['user_password']);
-    }
+if(isset($_GET['feedback']))
+{
+    $feedback = ($_GET['feedback']);
+    $feedback = '<i class="error">'.$feedback.'</i>';
+}
+else
+{
+    $feedback = '<i class="success">Please enter your log in details</i>';
+}
+
+if(($_SERVER['REQUEST_METHOD'] == 'POST'))
+{
+    var_dump('Posting back');
+    $validator->validate_login($_POST['user_name'], $_POST['user_password']);
+}
+else
+{
+    var_dump(($_SERVER['REQUEST_METHOD']));
+    var_dump('Not pasting back');
+}
 
 ?>
 
-<div class="stalactite prefix_3 grid_6">
+    <div class="stalactite prefix_3 grid_6">
 
-    <h3>Sign in</h3>
+        <h3>Sign in</h3>
 
-    <p><?php echo $feedback; ?></p>
+        <p><?php echo $feedback; ?></p>
 
-    <form id="auth-form" method="post" action="index.php">
-        <p>
-            User name:
-            <br>
-            <input type="text" name="user_name" width="80" placeholder="user name" value="<?php echo $_POST['user_name']; ?>">
-        </p>
-        <p>
-            Password:
-            <br>
-            <input type="password" name="user_password" width="80" placeholder="password">
-        </p>
+        <form id="auth-form" method="post" action="index.php">
+            <p>
+                User name:
+                <br>
+                <input type="text" name="user_name" width="80" placeholder="user name" value="<?php echo $_POST['user_name']; ?>">
+            </p>
+            <p>
+                Password:
+                <br>
+                <input type="password" name="user_password" width="80" placeholder="password">
+            </p>
 
-        <input class="open_btn" type="submit" value="Sign in">
-    </form>
-</div>
+            <input class="open_btn" type="submit" value="Sign in">
+        </form>
+    </div>
 
 <?php require_once('../includes/footer.php');?>

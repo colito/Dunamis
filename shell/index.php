@@ -43,7 +43,7 @@ if(!empty($_POST['command']))
     </div>
 
     <div id="shell_form" class="grid_6">
-        <form method="post" action="shell_command.php">
+        <form method="post" action="<?php echo navi_shell ?>">
             <p>Type in the command you would like executed:</p>
             <input type="text" name="command">
             <input class="open_btn" type="submit" value="Execute">
