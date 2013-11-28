@@ -28,7 +28,7 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST'))
 
         <p><?php echo $feedback; ?></p>
 
-        <form id="auth-form" method="post" action="index.php">
+        <form id="auth-form" method="post" action="<?php echo main_login?>">
             <p>
                 User name:
                 <br>
