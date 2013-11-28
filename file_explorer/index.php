@@ -27,7 +27,7 @@ if(isset($_GET['explore']))
 }
 else
 {
-    $file = '../';
+    $file = '../../';
     $current_path = '/';
 }
 
@@ -35,7 +35,7 @@ $dir = $file_fns->list_directories($file);
 ?>
 
     <div id="file_explorer" class="grid_8">
-        <a href="file_explore.php"><h3>File Explorer</h3></a>
+        <a href="<?php echo navi_file_explorer?>"><h3>File Explorer</h3></a>
     </div>
 
     <div id="file_explore" class="grid_8">
@@ -53,14 +53,14 @@ $dir = $file_fns->list_directories($file);
 
                 if(is_dir($full_path))
                 {
-                    echo '<a href="file_explore.php?explore='.$full_path.'" class="upper">'.$list_item.'</a>';
+                    echo '<a href="'.navi_file_explorer.'?explore='.$full_path.'" class="upper">'.$list_item.'</a>';
                     echo '<br>';
                 }
                 else if(is_file($full_path))
                 {
                     $full_path = str_replace($root, '', $full_path);
 
-                    echo '<a href="edit_open_file.php?file_path='.$full_path.'" class="lower">'.$list_item.'</a>';
+                    echo '<a href="'.navi_edit_file.'?file_path='.$full_path.'" class="lower">'.$list_item.'</a>';
                     echo '<br>';
                 }
             }
@@ -69,18 +69,18 @@ $dir = $file_fns->list_directories($file);
         {
             foreach($dir as $list_item)
             {
-                $full_path = realpath('../'.$list_item);
+                $full_path = realpath('../../'.$list_item);
 
                 if(is_dir($full_path))
                 {
-                    echo '<a href="file_explore.php?explore='.$full_path.'" class="upper">'.$list_item.'</a>';
+                    echo '<a href="'.navi_file_explorer.'?explore='.$full_path.'" class="upper">'.$list_item.'</a>';
                     echo '<br>';
                 }
                 else if(is_file($full_path))
                 {
                     $full_path = str_replace($root, '', $full_path);
 
-                    echo '<a href="edit_open_file.php?file_path='.$full_path.'" class="lower">'.$list_item.'</a>';
+                    echo '<a href="'.navi_edit_file.'?file_path='.$full_path.'" class="lower">'.$list_item.'</a>';
                     echo '<br>';
                 }
             }
