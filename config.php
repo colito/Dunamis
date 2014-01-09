@@ -9,9 +9,14 @@ class Config
     {
         # set this to the root folder relative to this projects containing folder
         $root = $_SERVER['DOCUMENT_ROOT'].'/emp/';
+        //$root = dirname(__FILE__);
         return $root;
     }
 }
+
+# DEFINITIONS ***********************************************************************/
+
+define('APP_ROOT_DIR', dirname(__FILE__));
 
 # navigation links
 define('navi_home', '../open_file/');
