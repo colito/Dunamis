@@ -1,9 +1,10 @@
 <?php
 
 session_start();
+require_once('../config.php');
 if(empty($_SESSION['admin_active']))
 {
-    header('Location: index.php');
+    header('Location: ../index.php');
 }
 
 ob_start();
@@ -20,27 +21,27 @@ if($file_job == 'open')
     else
     {
         $file_path = $_POST['file_path'];
-        if(file_exists('../'.$file_path))
+        if(file_exists('../../'.$file_path))
         {
             if(strpos($file_path, '.'))
             {
-                if(is_readable('../'.$file_path))
+                if(is_readable('../../'.$file_path))
                 {
-                    header('Location: edit_open_file.php?file_path='.$file_path);
+                    header('Location: '.navi_edit_file.'?file_path='.$file_path);
                 }
                 else
                 {
-                    header('Location: open_file.php?file_open=unreadable');
+                    header('Location: '.navi_open_file.'?file_open=unreadable');
                 }
             }
             else
             {
-                header('Location: open_file.php?file_open=invalid_file');
+                header('Location: '.navi_open_file.'?file_open=invalid_file');
             }
         }
         else
         {
-            header('Location: open_file.php?file_open=not_found');
+            header('Location: '.navi_open_file.'?file_open=not_found');
         }
     }
 }
@@ -55,9 +56,9 @@ elseif($file_job == 'create')
     {
         $new_file = $_POST['new_file'];
 
-        if(file_exists('../'.$new_file))
+        if(file_exists('../../'.$new_file))
         {
-            header('Location: open_file.php?file_create=exists');
+            header('Location: '.navi_open_file.'?file_create=exists');
         }
         else
         {
@@ -75,12 +76,12 @@ elseif($file_job == 'create')
                 {
                     $result = 'false';
                 }
-                header('Location: open_file.php?file_create='.$result);
+                header('Location: '.navi_open_file.'?file_create='.$result);
             }
             else
             {
                 //header('Location: '.$_SERVER['HTTP_REFERER']);
-                header('Location: open_file.php?file_create=false');
+                header('Location: '.navi_open_file.'?file_create=false');
             }
         }
     }
