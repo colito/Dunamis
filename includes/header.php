@@ -74,7 +74,7 @@ $config = new Config();
             </div>
 
             <div id="open_file">
-                <form method="post" action="../fns/validator.php">
+                <form method="post" action="../open_file/validator.php">
                     <input type="hidden" name="file_job" value="open">
                     <input type="text" name="file_path" width="80" placeholder="Specify file path">
                     <input class="open_btn" type="submit" value="Open">
