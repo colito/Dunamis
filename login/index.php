@@ -32,7 +32,7 @@ if(($_SERVER['REQUEST_METHOD'] == 'POST'))
             <p>
                 User name:
                 <br>
-                <input type="text" name="user_name" width="80" placeholder="user name" value="<?php echo $_POST['user_name']; ?>">
+                <input type="text" name="user_name" width="80" placeholder="user name" value="<?php echo @$_POST['user_name']; ?>">
             </p>
             <p>
                 Password:
